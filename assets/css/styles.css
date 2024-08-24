@@ -1,0 +1,733 @@
+/* General styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    padding-top: 50px;
+}
+/* Remove any unintended margins or padding */
+* {
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
+/* Adjust any element that might cause overflow */
+.container, .main-content, .header-container {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    border: 2px solid #242e4a;
+    padding: 10px 50px;
+}
+
+
+.card h2 {
+    margin-top: 0;
+    color: #242e4a;
+}
+
+
+
+
+/* Header Styles */
+.header {
+    background-color: #242e4a;
+    color: white;
+    padding: 10px 20px; /* Adjusted padding for consistent height */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 60px; /* Fixed height to prevent resizing */
+    display: flex;
+    align-items: center; /* Center elements vertically */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%; /* Ensure full width */
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.main-nav {
+    margin-right: 30px; /* Adjust this value to move buttons away from the left edge */
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Add spacing between menu items */
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    background-color: #1e6120;
+}
+
+.home-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.home-image {
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.home-text h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.home-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.card .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1e6120;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.card .btn:hover {
+    background-color: #155115;
+}
+
+@media (max-width: 768px) {
+    .home-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .home-image {
+        width: 100%;
+    }
+}
+
+.dashboard-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.dashboard-item {
+    flex: 1 1 300px; /* Adjust the min-width as needed */
+    margin-bottom: 20px;
+}
+
+/* Chart Container Styling */
+.chart-container {
+    flex: 2;
+    max-width: 400px;
+    height: auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.main-content h1 {
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+
+
+
+/* Additional styles for the profile page */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="number"],
+.form-group input[type="password"],
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    background-color: #242e4a;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #1e6120;
+}
+
+/* Profile Container styles */
+.profile-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.profile-container h2 {
+    text-align: center; /* Center the header */
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #242e4a;
+}
+
+/* Form group styling */
+.profile-container .form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.profile-container .form-group label {
+    width: 30%;
+    font-weight: bold;
+    text-align: right;
+    margin-right: 20px;
+}
+
+.profile-container .form-group input,
+.profile-container .form-group select {
+    width: 65%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Button styling */
+.profile-container button[type="submit"] {
+    background-color: #242e4a;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.profile-container button[type="submit"]:hover {
+    background-color: #1e6120;
+}
+
+/* Separate sections with borders */
+.profile-container .profile-section {
+    margin-bottom: 40px;
+}
+
+.profile-container h2 {
+    border-bottom: 1px solid #1e6120;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: center; /* Center the header */
+}
+
+/* Add spacing between the profile and password sections */
+.profile-container .password-section {
+    margin-top: 40px;
+    text-align: center; /* Center the header */
+}
+
+
+
+
+/* Container for the search form */
+.search-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; /* Space between the elements */
+}
+
+.search-form .form-group {
+    flex: 1 1 auto;
+    width: auto;
+}
+
+.search-form label {
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.search-form input[type="text"], 
+.search-form input[type="date"], 
+.search-form select {
+    width: auto;
+    max-width: 130px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin: auto;
+}
+
+.search-form button {
+    flex-shrink: 0;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    margin: auto;
+}
+
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+
+
+
+/* Adjustments for smaller screens */
+@media (max-width: 922px) {
+    .search-form {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Styles for Login and Registration Forms */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 150px); /* Ensures the container takes up the full height of the viewport */
+    background-color: #f4f4f4;
+}
+
+.auth-form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%; /* Ensures the form doesn't exceed the max-width */
+}
+
+.auth-form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #242e4a;
+}
+
+.auth-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.auth-form input[type="text"],
+.auth-form input[type="email"],
+.auth-form input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.auth-form button[type="submit"] {
+    background-color: #242e4a;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+.auth-form button[type="submit"]:hover {
+    background-color: #1e6120;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .auth-form {
+        padding: 20px;
+    }
+}
+
+
+
+/* Footer Styles */
+footer {
+    background-color: #242e4a;
+    color: white;
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
+}
+/* Sidebar Styles */
+.sidebar {
+    background-color: #1e6120;
+    width: 220px; /* Make sure this matches the margin-left for .main-content */
+    position: fixed;
+    top: 60px; /* Adjust based on your header height */
+    bottom: 0;
+    left: 0;
+    padding: 50px 0; /* Adjust padding if needed */
+    z-index: 999;
+}
+
+.main-content {
+            
+    flex: 1;
+    padding: 60px; 
+    min-height: calc(100vh - 80px); 
+    text-align: center;
+    max-width: 90%; 
+}
+
+/* When the sidebar is visible */
+body.sidebar-visible .main-content {
+    margin-left: 220px; /* Adjust this value to match the width of your sidebar */
+    max-width: 100%;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 20px 20px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 15px 20px; 
+    margin: 10px 0;      
+    text-decoration: none;
+    color: white;
+    background-color: #1e6120; 
+    border-radius: 5px;  
+    text-align: center;
+    font-size: 18px;     
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+
+.sidebar a:hover {
+    background-color: #155115;  
+    transform: scale(1.05);     
+}
+
+/* Mobile Menu Toggle Button */
+.menu-toggle {
+    display: none;
+    background-color: #ffffff;
+    color: #242e4a;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+
+/* Sidebar button styling */
+.sidebar a {
+    display: block;
+    padding: 15px 20px;  /* Increase padding for larger buttons */
+    margin: 10px 0;      /* Add margin between buttons */
+    text-decoration: none;
+    color: white;
+    background-color: #1e6120;  /* Button color */
+    border-radius: 5px;  /* Add some border radius for rounded corners */
+    text-align: center;
+    font-size: 18px;     /* Increase font size */
+    transition: background-color 0.3s ease, transform 0.2s ease;  /* Add transition effects */
+}
+
+
+
+/*Enter Score Styles*/
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="number"],
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    background-color: #242e4a;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #1e6120;
+}
+
+
+/* Score History Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #242e4a;
+    color: white;
+    text-align: left;
+}
+
+td {
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+/* General Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Label Styles */
+form label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Input Styles */
+form input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Dropdown Styles */
+form select {
+    padding: 5px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Score Inputs Layout */
+form div.scores-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Button Styles */
+form button {
+    padding: 10px 20px;
+    background-color: #242e4a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+form button:hover {
+    background-color: #1e6120;
+}
+
+/* Score Input Styles */
+.score-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.score-column {
+    width: calc(50% - 20px); /* Two columns with space between them */
+}
+
+.score-column label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.score-column input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+
+    .main-nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background-color: #242e4a;
+        width: 200px;
+        padding: 10px 0;
+        display: none; /* Hide menu by default */
+        border-radius: 0 0 5px 5px;
+    }
+
+    .main-nav ul.show {
+        display: flex; /* Show menu when toggle is active */
+    }
+
+    .main-nav ul li {
+        text-align: center;
+    }
+    form {
+        padding: 15px;
+        width: 100%;
+    }
+
+    form input[type="number"],
+    form select {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    form button {
+        width: 100%;
+        padding: 15px;
+        font-size: 18px;
+    }
+
+}
